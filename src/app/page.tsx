@@ -835,7 +835,10 @@ export default function RegistryErrorsPrototype() {
                           className="rounded-2xl pl-9"
                         />
                       </div>
-                      <Select value={category} onValueChange={setCategory}>
+                      <Select
+                        value={category}
+                        onValueChange={(value) => setCategory(value ?? "all")}
+                      >
                         <SelectTrigger className="rounded-2xl">
                           <SelectValue placeholder="Категория" />
                         </SelectTrigger>
@@ -850,7 +853,10 @@ export default function RegistryErrorsPrototype() {
                           )}
                         </SelectContent>
                       </Select>
-                      <Select value={status} onValueChange={setStatus}>
+                      <Select
+                        value={status}
+                        onValueChange={(value) => setStatus(value ?? "all")}
+                      >
                         <SelectTrigger className="rounded-2xl">
                           <SelectValue placeholder="Статус" />
                         </SelectTrigger>
@@ -865,7 +871,10 @@ export default function RegistryErrorsPrototype() {
                           )}
                         </SelectContent>
                       </Select>
-                      <Select value={severity} onValueChange={setSeverity}>
+                      <Select
+                        value={severity}
+                        onValueChange={(value) => setSeverity(value ?? "all")}
+                      >
                         <SelectTrigger className="rounded-2xl">
                           <SelectValue placeholder="Severity" />
                         </SelectTrigger>
@@ -884,7 +893,7 @@ export default function RegistryErrorsPrototype() {
                     <div className="grid gap-3 md:grid-cols-[1fr_auto]">
                       <Select
                         value={serviceName}
-                        onValueChange={setServiceName}
+                        onValueChange={(value) => setServiceName(value ?? "all")}
                       >
                         <SelectTrigger className="rounded-2xl">
                           <SelectValue placeholder="Сервис" />
